@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Calculator</title>
+</head>
+<body>
+    <h1>Nutrition Calculator</h1>
+    <form id="nutrition-form">
+        <label for="weight">น้ำหนักตัว (กิโลกรัม):</label>
+        <input type="number" id="weight" name="weight" required><br><br>
+        
+        <label for="height">ส่วนสูง (เซนติเมตร):</label>
+        <input type="number" id="height" name="height" required><br><br>
+        
+        <label for="age">อายุ (ปี):</label>
+        <input type="number" id="age" name="age" required><br><br>
+        
+        <label for="gender">เพศ:</label>
+        <select id="gender" name="gender">
+            <option value="male">ชาย</option>
+            <option value="female">หญิง</option>
+        </select><br><br>
+
+        <label for="days">จำนวนวันต่อสัปดาห์ที่ออกกำลังกาย:</label>
+        <input type="number" id="days" name="days" min="0" max="7" required><br><br>
+        
+        <label for="hours">จำนวนชั่วโมงต่อครั้งที่ออกกำลังกาย:</label>
+        <input type="number" id="hours" name="hours" min="0" step="0.1" required><br><br>
+        
+        <label for="goal">เป้าหมายการออกกำลังกาย:</label>
+        <select id="goal" name="goal">
+            <option value="maintain">รักษาน้ำหนัก</option>
+            <option value="gain">เพิ่มกล้ามเนื้อ</option>
+            <option value="lose">ลดน้ำหนัก</option>
+        </select><br><br>
+
+        <label for="meals">จำนวนมื้ออาหารต่อวัน:</label>
+        <input type="number" id="meals" name="meals" min="3" max="6" required><br><br>
+        
+        <button type="button" onclick="calculateNutrition()">คำนวณ</button>
+    </form>
+    
+    <h2 id="result"></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
